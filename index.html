@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>51抽奖</title>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.bb, .bb::before, .bb::after ,.aa, .aa::before, .aa::after {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		}
+		 
+		.bb,.aa {
+		  width: 200px;
+		  height: 200px;
+		  margin: auto;
+		  color: #69ca62;
+		  box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+		}
+		.bb::before, .bb::after ,.aa::before, .aa::after {
+		  content: '';
+		  z-index: -1;
+		  margin: -5%;
+		  box-shadow: inset 0 0 0 2px;
+		  animation: clipMe 8s linear infinite;
+		}
+		.aa::before {
+		  animation-delay: -2s;
+		}
+		.bb::before {
+		  animation-delay: -4s;
+		}
+		.aa::after {
+		  animation-delay: -6s;
+
+		}
+		.bb:hover::after, .bb:hover::before {
+		  background-color: rgba(255, 0, 0, 0.3);
+		}
+		 
+		@keyframes clipMe {
+		  0%, 100% {
+		    clip: rect(0px, 220.0px, 15px, 205px);
+		  }
+		}   
+
+		@keyframes clipMe {
+		  0%, 100% {
+		    clip: rect(0px, 30px, 30px, 0px);
+		  }
+		  25% {
+		    clip: rect(190px, 30px, 220.0px, 0px);
+		  }
+		  50% {
+		    clip: rect(190px, 220.0px, 220.0px, 190px);
+		  }
+		  75% {
+		    clip: rect(0px, 220.0px, 30px, 190px);
+		  }
+		}   
+	</style>
+</head>
+<body>
+	<div class='alert_all'>
+		<div class='bb'>
+			
+		</div>
+		<div class='aa'>
+			
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
